@@ -33,7 +33,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
 }
 
-.box > .header {
+.box>.header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -42,30 +42,35 @@ body {
     border-bottom: 1px solid #dadde1;
 }
 
-.box > .header > .pageTitle {
+.box>.header>.pageTitle {
     font-size: 20px;
     font-weight: 700;
 }
-.box > .header > .projectTitle {
+
+.box>.header>.projectTitle {
     font-size: 22px;
     font-weight: 800;
     color: #1877f2;
 }
-.box > .body {
+
+.box>.body {
     width: 100%;
     padding: 15px 12px 0;
 }
-.box > .body .line {
+
+.box>.body .line {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
 }
-.box > .body .line:not(:first-child) {
+
+.box>.body .line:not(:first-child) {
     margin-top: 12px;
 }
-.box > .body .line input {
+
+.box>.body .line input {
     width: 100%;
     border: 1px solid #ccd0d5;
     border-radius: 4px;
@@ -73,12 +78,15 @@ body {
     padding: 12px;
     cursor: text;
 }
-.box > .body .line input::placeholder {
+
+.box>.body .line input::placeholder {
     font-weight: 500;
 }
-.box > .body .line input.w50 {
+
+.box>.body .line input.w50 {
     width: 100%;
 }
+
 .box .footer {
     width: 100%;
     display: flex;
@@ -86,7 +94,8 @@ body {
     align-items: center;
     padding: 15px 0 20px;
 }
-.box > .footer button {
+
+.box>.footer button {
     cursor: pointer;
     font-size: 16px;
     font-weight: 700;
@@ -96,7 +105,6 @@ body {
     background-color: #00a400;
     letter-spacing: 1px;
 }
-
 
 .errorText {
     width: 100%;
@@ -115,5 +123,82 @@ body {
     font-weight: 500;
     background-color: #00a400;
     color: white;
-    padding: 6px 12px; 
+    padding: 6px 12px;
+}
+
+.list {
+    width: 100%;
+    margin: 12px 0;
+}
+
+.list .item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: start;
+    padding: 0 12px;
+}
+
+.list .item:nth-child(even) {
+    padding: 8px 12px;
+    background-color: aliceblue;
+}
+
+.list .item:not(:nth-child(1)) {
+    margin-top: 12px;
+}
+
+.list .item .section {
+    width: auto;
+}
+
+.list .item .section div {
+    width: 100%;
+}
+
+.list .item .section div.fullName {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.list .item .section div.username {
+    margin-top: 6px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.list .item .section div.email {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.list .item .section div.phone {
+    margin-top: 6px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.list .item .section div.edit {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 12px;
+    color: #8a8d91;
+    font-weight: 600;
+}
+
+.list .item .section div.delete {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 12px;
+    color: #8a8d91;
+    font-weight: 600;
+}
+.list .item .section div.edit a:hover, .list .item .section div.delete a:hover {
+    text-decoration: underline;
 }
