@@ -4,14 +4,14 @@
 <html>
 
 <head>
-    <title>Php Crud</title>
+    <title>New User | Php Crud</title>
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <form method="POST" action="./addUser.php" class="box">
         <div class="header">
-            <a href="#" class="pageTitle">User Create</a>
+            <a href="#" class="pageTitle">New User</a>
             <a href="#" class="projectTitle">Php-Crud</a>
         </div>
         <div class="body">
@@ -31,11 +31,13 @@
                 <input type="text" placeholder="Phone number" name="phone" <?php if (isset($_SESSION["userCreateInputs"]["phone"])) { echo "value='".$_SESSION["userCreateInputs"]["phone"]."'"; } ?> <?php if (isset($_SESSION["userCreateErrors"]["phone"])) { ?> style="border-color: red;" <?php } ?>>
             </div>
             <?php if (isset($_SESSION["userCreateErrors"]["phone"])) { echo "<div class='errorText'>" . $_SESSION["userCreateErrors"]["phone"] . "</div>"; } ?>
-
-            <?php if (isset($_SESSION["userCreateSuccess"])) { echo "<div class='successText'>" . $_SESSION["userCreateSuccess"] . "</div>"; } ?>
         </div>
         <div class="footer">
             <button type="submit" name="addUser" value="true">Create</button>
+        </div>
+        <div class="menu">
+            <a href="./index.php" class="item active">New User</a>
+            <a href="./users.php" class="item">Users List</a>
         </div>
     </form>
 </body>

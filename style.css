@@ -92,7 +92,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 0 20px;
+    padding: 15px 0 0;
 }
 
 .box>.footer button {
@@ -128,7 +128,7 @@ body {
 
 .list {
     width: 100%;
-    margin: 12px 0;
+    margin: 12px 0 0;
 }
 
 .list .item {
@@ -199,6 +199,102 @@ body {
     color: #8a8d91;
     font-weight: 600;
 }
-.list .item .section div.edit a:hover, .list .item .section div.delete a:hover {
+
+.list .item .section div.edit a:hover,
+.list .item .section div.delete a:hover {
     text-decoration: underline;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 15px 20px;
+}
+
+.menu .item {
+    font-weight: 600;
+    font-size: 14px;
+    color: #8a8d91;
+}
+
+.menu .item:hover {
+    text-decoration: underline;
+}
+
+.menu .item.active {
+    color: #3b3c3e;
+}
+
+
+.deleteConfirm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 12px 16px;
+}
+
+.deleteConfirm .title {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.deleteConfirm .description {
+    width: 100%;
+    padding: 12px 18px;
+    background-color: #e7e9ed;
+    border-radius: 6px;
+}
+
+.deleteConfirm .description .line {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 6px;
+}
+
+.deleteConfirm .description .line label {
+    font-weight: 300;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.deleteConfirm .description .line span {
+    font-weight: 500;
+    font-size: 16px;
+    font-style: bold;
+}
+
+.deleteConfirm .action {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 16px;
+}
+
+.deleteConfirm .action a {
+    font-size: 14px;
+    padding: 6px 0;
+}
+
+.deleteConfirm .action a:nth-child(1) {
+    font-weight: 500;
+}
+
+.deleteConfirm .action a:nth-child(1):hover {
+    text-decoration: underline;
+}
+
+.deleteConfirm .action a:nth-last-child(1) {
+    padding: 6px 12px;
+    border-radius: 12px;
+    color: white;
+    background-color: #be4b49;
 }

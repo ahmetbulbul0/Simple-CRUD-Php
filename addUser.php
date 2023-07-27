@@ -46,5 +46,5 @@ if (isset($_POST["addUser"])) {
         $_SESSION["userCreateSuccess"] = "User created successfully";
     }
 
-    header("Location: index.php");
+    header("Location: users.php");
 }
