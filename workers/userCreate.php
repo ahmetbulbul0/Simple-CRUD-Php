@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once("./database.php");
+require_once("./connectDatabase.php");
 
 if (isset($_POST["addUser"])) {
     $firstName = htmlspecialchars(strtolower($_POST["first_name"]));
@@ -35,6 +35,10 @@ if (isset($_POST["addUser"])) {
         $phone = NULL;
     }
 
+    if (isset($_SESSION["userCreateErrors"])) {
+        header("Location: ../?p=new-user");
+    }
+
     if (!isset($_SESSION["userCreateErrors"])) {
         if ($phone == null) {
             $userCreate = $mysqli->query("INSERT INTO users (first_name, last_name, username, email) VALUES ('$firstName', '$lastName', '$username','$email')");
@@ -44,7 +48,9 @@ if (isset($_POST["addUser"])) {
         session_destroy();
         session_start();
         $_SESSION["userCreateSuccess"] = "User created successfully";
+        header("Location: ../");
     }
-
-    header("Location: users.php");
+    
+} else {
+    header("Location: ../");
 }
