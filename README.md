@@ -15,6 +15,7 @@ This project is ideal for those new to PHP, providing a hands-on way to understa
 - Html
 - Css
 - Php
+- MySql
 
 ## Setup
 
